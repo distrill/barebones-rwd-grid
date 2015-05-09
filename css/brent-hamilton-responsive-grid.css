@@ -1,0 +1,200 @@
+* {
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    box-sizing: inherit;
+}
+
+
+.grid-container {
+    width: 90%
+    max-width: 1200px;
+}
+
+.grid-container-full-bleed {
+    width: 100%;
+}
+
+
+
+/*     float colums so when resized they fall below      */
+.row:before,
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[class*='col-'] {
+    float: left;
+    min-height: 1px;
+}
+
+
+
+/*   column widths, adjust to make more columns etc   */
+.col-1 {
+    width: 16.66%;
+}
+
+.col-2 {
+    width: 33.33%;
+}
+
+.col-3 {
+    width: 50%;
+}
+
+.col-4 {
+    width: 66.664%;
+}
+
+.col-5 {
+    width: 83.33%;
+}
+
+.col-6 {
+    width: 100%;
+}
+
+.col-nav {
+    width: 16.66%;
+}
+
+
+
+/*   make the offsets so appropriate   */
+.col-offset-1 {
+    margin-left: 16.66%;
+}
+
+.col-offset-2 {
+    margin-left: 33.33%;
+}
+
+.col-offset-3 {
+    margin-left: 50%;
+}
+
+.col-offset-4 {
+    margin-left: 66.664%;
+}
+
+.col-offset-5 {
+    margin-left: 83.33%;
+}
+
+
+
+/*   navbar button stuff etc   */
+/*#responsive-menu-button-dropdown {
+    display: none;
+}*/
+.navbar-hidden-button {
+    width: 100%;
+    display: none;
+}
+
+.responsive-navbar-menu-button-wrapper {
+    display: none;
+    /*display: none !important;*/
+}
+
+#responsive-menu-button-dropdown {
+    display: none;
+}
+
+.navbar-response-dropdown-elem {
+    display: none;
+    width: 100%;
+}
+
+.navbar-elem {
+    display: block !important;
+    float: left;
+}
+
+
+
+/*   resizing and reshaping. this is the responsive.   */
+@media all and (max-width: 650px) {
+    .col-1 {   width: 50%;     }
+    .col-2 {   width: 100%;    }
+    .col-3 {   width: 100%;    }
+    .col-4 {   width: 100%;    }
+    .col-5 {   width: 100%;    }
+    .col-6 {   width: 100%;    }
+    .col-nav { width: 100%;  }
+
+    [class*='col-offset-'] {
+        margin-left: 0px;
+    }
+
+
+    body {
+        background-color: blue;
+    }
+
+
+
+    .navbar-elem {
+        display: none;
+    }
+
+    .navbar-elem-wrap {
+        display: none;
+    }
+
+    .responsive-navbar-menu-button-wrapper {
+        display: block;
+    }
+
+    .navbar-response-dropdown-elem {
+        display: inline;
+    }
+
+    .navbar-hidden-button {
+        display: block;
+    }
+
+    .something {
+        display: block !important;
+    }
+
+    /*#responsive-menu-button-dropdown {
+        display: block;
+    }*/
+}
+
+@media (max-width: 650px) {
+
+    .nav > li {
+        display: block;
+        text-align: left;
+        margin-left: 20px;
+    }
+}
+
+/*@media all and (max-width: 650px) {
+    .col-1 { width: 100%  }
+    .col-2 { width: 100%  }
+    .col-3 { width: 100%  }
+    .col-4 { width: 100%  }
+    .col-5 { width: 100%  }
+    .col-6 { width: 100%  }
+}*/
+
+
+
+/*   generic stylying, only for debug.   */
+/*.outline, .outline *{
+    outline: 1px solid #F6A1A1;
+}
+
+[class*='col-'] > p {
+    background-color: #FFC2C2;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: white;
+}*/
